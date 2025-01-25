@@ -45,5 +45,65 @@ button, input[type="submit"], input[type="reset"] {
     transition: visibility 0.5s, opacity 0.5s linear;
     justify-content: left;
     position: absolute;
-    z-index: 2;
+    z-index: 3;
 }
+
+.carousel.frame {
+    overflow: hidden;
+    display: grid;
+}
+.carousel.container {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 1s;
+}
+.carousel.image {
+    box-sizing: border-box;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+}
+.carousel.control {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+    padding: 5px;
+    position: absolute;
+    z-index: 2;
+    align-self: last baseline;
+    justify-self: center;
+}
+.carousel.control >
+.carousel.button {
+    width: 10px;
+    height: 10px;
+    background-color: lightgrey;
+    border-radius: 5px;
+}
+.carousel.control >
+.carousel.button.selected {
+    background-color: grey;
+}
+.carousel.button.next,
+.carousel.button.prev {
+    position: absolute;
+    z-index: 2;
+    align-self: center;
+    padding: 5px;
+    color: lightgrey;
+    font-weight: bolder;
+}
+
+.carousel.button.prev {
+    justify-self: first baseline
+}
+
+.carousel.button.next {
+    justify-self: last baseline;
+}
+
+
+
