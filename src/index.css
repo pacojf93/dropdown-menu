@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+body {
+    display: grid;
+    gap: 20px;
+}
+
 button, input[type="submit"], input[type="reset"] {
 	background: none;
 	color: inherit;
@@ -12,17 +17,9 @@ button, input[type="submit"], input[type="reset"] {
 	cursor: pointer;
 	outline: inherit;
 }
-
-.drop.item > a {
-    text-decoration-line: none;
-    text-decoration-color: none;
+.drop.container {
+    
 }
-
-.drop.list.invisible {
-    visibility: hidden;
-    opacity: 0;
-}
-
 .drop.button,
 .drop.list {
     display: grid;
@@ -45,7 +42,17 @@ button, input[type="submit"], input[type="reset"] {
     transition: visibility 0.5s, opacity 0.5s linear;
     justify-content: left;
     position: absolute;
-    z-index: 3;
+    z-index: 1;
+}
+
+.drop.item > a {
+    text-decoration-line: none;
+    text-decoration-color: none;
+}
+
+.drop.list.invisible {
+    visibility: hidden;
+    opacity: 0;
 }
 
 .carousel.frame {
